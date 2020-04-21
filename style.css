@@ -1,0 +1,271 @@
+/*IMPORTED FONTS*/
+
+/*GLOBAL RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /*ROOT FONT SIZE*/
+    font-size: 62.5%; /*1rem = 10px*/
+}
+
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 30%;
+    }
+}
+
+body {
+    /*GLOBAL FONT*/
+    font-family: sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60");
+    background-size: cover;
+    color: white;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.4rem;
+}
+
+.weather-container {
+    width: 50%;
+    margin: 3rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, min-content);
+
+    /* justify-items: center;
+    align-content: center; */
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .weather-container {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .weather-container {
+        width: 90%;
+    }
+}
+
+.weather-container h1 {
+    grid-row: 1 / 2;
+    grid-column: 2 / 12;
+    padding: 1rem 0;
+}
+
+.search-form {
+    grid-row: 2 / 3;
+    grid-column: 2 / 12;
+    padding: 1rem 0;
+}
+
+.search-form input {
+    font-size: 1.4rem;
+    padding: .8rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color: rgba(0, 0, 0);
+}
+
+.search-btn {
+    border: none;
+    font-size: 1.4rem;
+    padding: .8rem;
+    border-radius: .5rem;
+    background-color: green;
+    color: white;
+}
+
+.display {
+    grid-row: 4 / 12;
+    grid-column: 1 / -1;
+
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 15vh 15vh 15vh 15vh 15vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.country {
+    grid-row: 1 / 2;
+    grid-column: 1 / 5;
+    font-size: 1.4rem;
+
+}
+
+.city {
+    grid-row: 1 / 2;
+    grid-column: 5 / 9;
+    font-size: 1.4rem;
+
+}
+
+.region {
+    grid-row: 1 / 2;
+    grid-column: 9 / -1;
+    font-size: 1.4rem;
+
+}
+
+.image {
+    grid-row: 2 / 3;
+    grid-column: 1 / 7;
+
+}
+
+.text {
+    grid-row: 2 / 3;
+    grid-column: 7 / -1;
+    font-size: 1.4rem;
+
+}
+
+.temp {
+    grid-row: 3 / 4;
+    grid-column: 1 / 7;
+    font-size: 1.4rem;
+
+}
+
+.feels-like {
+    grid-row: 3 / 4;
+    grid-column: 7 / -1;
+    font-size: 1.4rem;
+}
+
+.wind-speed {
+    grid-row: 4 / 5;
+    grid-column: 1 / 7;
+    font-size: 1.4rem;
+
+}
+
+.wind-direction {
+    grid-row: 4 / 5;
+    grid-column: 7 / -1;
+    font-size: 1.4rem;
+
+}
+
+.humidity {
+    grid-row: 5 / 6;
+    grid-column: 1 / 5;
+    font-size: 1.4rem;
+
+}
+
+.uv-rating {
+    grid-row: 5 / 6;
+    grid-column: 5 / 9;
+    font-size: 1.4rem;
+
+}
+
+.visibility {
+    grid-row: 5 / 6;
+    grid-column: 9 / -1;
+    font-size: 1.4rem;
+
+}
+
+.country-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.city-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.region-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.temp-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.feels-like-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wind-speed-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.wind-direction-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.humidity-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.uv-rating-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.visibility-info {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: center;
+}
